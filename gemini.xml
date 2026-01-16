@@ -1,0 +1,133 @@
+<mxfile host="65bd71144e">
+    <diagram id="MusicLogicAdvanced" name="Music vs Speech and Lyrics Validation">
+        <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                
+                <mxCell id="n1" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;fontWeight=bold;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="320" width="70" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="n2" value="User Registration or Login" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="315" width="150" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="n3" value="Authenticated?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="300" width="100" height="80" as="geometry" />
+                </mxCell>
+                
+                <mxCell id="n4" value="User Uploads Song &amp; Lyrics" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="310" width="180" height="60" as="geometry" />
+                </mxCell>
+
+                <mxCell id="val1" value="Is file .mp3 or .wav?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="295" width="120" height="90" as="geometry" />
+                </mxCell>
+
+                <mxCell id="n6" value="Backend Receives Input" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="315" width="140" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="n7" value="Preprocessing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="315" width="110" height="50" as="geometry" />
+                </mxCell>
+
+                <mxCell id="a1" value="Audio Dataset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="40" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a2" value="Audio Preprocessing" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="100" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a3" value="Feature Extraction" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="160" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a4" value="Convert Features to CSV" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="220" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a5" value="Genre Model Training" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="280" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a6" value="Genre Model Evaluation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="340" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a7" value="Genre Prediction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="400" width="140" height="40" as="geometry" />
+                </mxCell>
+                
+                <mxCell id="check_music" value="Is it Music?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+                    <mxGeometry x="1155" y="470" width="110" height="80" as="geometry" />
+                </mxCell>
+                <mxCell id="speech_noise" value="Display: Speech or Noise" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="490" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="a8" value="Display Music Genre" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="580" width="140" height="50" as="geometry" />
+                </mxCell>
+
+                <mxCell id="l1" value="Lyrics Dataset (CSV)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="160" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="l2" value="Lyrics Preprocessing" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="220" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="l3" value="Lyrics Model Training" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="280" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="l4" value="Lyrics Model Evaluation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="340" width="140" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="l5" value="Lyrics Emotion Prediction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="420" width="140" height="40" as="geometry" />
+                </mxCell>
+
+                <mxCell id="check_lyrics" value="Lyrics Entered?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+                    <mxGeometry x="1345" y="470" width="110" height="80" as="geometry" />
+                </mxCell>
+                <mxCell id="lyric_empty" value="Display: Not Empty" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;" vertex="1" parent="1">
+                    <mxGeometry x="1470" y="490" width="120" height="40" as="geometry" />
+                </mxCell>
+                <mxCell id="l6" value="Display Emotion Result" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="580" width="140" height="50" as="geometry" />
+                </mxCell>
+
+                <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontWeight=bold;" vertex="1" parent="1">
+                    <mxGeometry x="1260" y="700" width="80" height="50" as="geometry" />
+                </mxCell>
+
+                <mxCell id="e1" edge="1" parent="1" source="n1" target="n2"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="n2" target="n3"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e3" value="False" edge="1" parent="1" source="n3" target="n2"><mxGeometry x="-0.7" relative="1" as="geometry"><Array as="points"><mxPoint x="350" y="280"/><mxPoint x="195" y="280"/></Array></mxGeometry></mxCell>
+                <mxCell id="e4" value="True" edge="1" parent="1" source="n3" target="n4"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="n4" target="val1"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e_err" value="No (Error)" edge="1" parent="1" source="val1" target="n4"><mxGeometry x="-0.8" relative="1" as="geometry"><Array as="points"><mxPoint x="710" y="420"/><mxPoint x="530" y="420"/></Array></mxGeometry></mxCell>
+                <mxCell id="e_ok" value="Yes" edge="1" parent="1" source="val1" target="n6"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e8" edge="1" parent="1" source="n6" target="n7"><mxGeometry relative="1" as="geometry"/></mxCell>
+                
+                <mxCell id="e9" edge="1" parent="1" source="n7" target="a1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1110" y="340"/><mxPoint x="1110" y="60"/></Array></mxGeometry></mxCell>
+                <mxCell id="e10" edge="1" parent="1" source="a1" target="a2"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e11" edge="1" parent="1" source="a2" target="a3"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e12" edge="1" parent="1" source="a3" target="a4"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e13" edge="1" parent="1" source="a4" target="a5"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e14" edge="1" parent="1" source="a5" target="a6"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e15" edge="1" parent="1" source="a6" target="a7"><mxGeometry relative="1" as="geometry"/></mxCell>
+                
+                <mxCell id="e_audio_pred" edge="1" parent="1" source="a7" target="check_music"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e_is_music" value="Yes" edge="1" parent="1" source="check_music" target="a8"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e_is_noise" value="No" edge="1" parent="1" source="check_music" target="speech_noise"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+                <mxCell id="e17" edge="1" parent="1" source="n7" target="l1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1110" y="340"/><mxPoint x="1110" y="180"/></Array></mxGeometry></mxCell>
+                <mxCell id="e18" edge="1" parent="1" source="l1" target="l2"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e19" edge="1" parent="1" source="l2" target="l3"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e20" edge="1" parent="1" source="l3" target="l4"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e21" edge="1" parent="1" source="l4" target="l5"><mxGeometry relative="1" as="geometry"/></mxCell>
+                
+                <mxCell id="e_lyric_pred" edge="1" parent="1" source="l5" target="check_lyrics"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e_lyric_yes" value="Yes" edge="1" parent="1" source="check_lyrics" target="l6"><mxGeometry relative="1" as="geometry"/></mxCell>
+                <mxCell id="e_lyric_no" value="No" edge="1" parent="1" source="check_lyrics" target="lyric_empty"><mxGeometry relative="1" as="geometry"/></mxCell>
+                
+                <mxCell id="e23" edge="1" parent="1" source="a8" target="end"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1210" y="725"/></Array></mxGeometry></mxCell>
+                <mxCell id="e24" edge="1" parent="1" source="l6" target="end"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1400" y="725"/></Array></mxGeometry></mxCell>
+                <mxCell id="e25" edge="1" parent="1" source="speech_noise" target="end"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1070" y="725"/></Array></mxGeometry></mxCell>
+                <mxCell id="e26" edge="1" parent="1" source="lyric_empty" target="end"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1530" y="725"/></Array></mxGeometry></mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

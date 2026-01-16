@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+.history-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 120px auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.user {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+th {
+    background: #1e90ff;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.home-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 25px;
+    border: none;
+    background: #ff4757;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.home-btn:hover {
+    background: #ff6b81;
+}

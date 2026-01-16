@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="SoundFlex Complete Process Flow" id="0">
+    <mxGraphModel dx="373603" dy="249272" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rEaOL-tddSrCEeYYODCk-46" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Start" vertex="1">
+          <mxGeometry height="60" width="140" x="-1800" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="rEaOL-tddSrCEeYYODCk-47" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1280" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rEaOL-tddSrCEeYYODCk-48" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="User Registration or Login" vertex="1">
+          <mxGeometry height="60" width="300" x="-1610" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="rEaOL-tddSrCEeYYODCk-49" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="User Uploads Song (WAV or MP3)" vertex="1">
+          <mxGeometry height="60" width="300" x="-1290" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rEaOL-tddSrCEeYYODCk-51" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="User Enters Lyrics" vertex="1">
+          <mxGeometry height="60" width="300" x="-1250" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="rEaOL-tddSrCEeYYODCk-52" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Backend Receives Input" vertex="1">
+          <mxGeometry height="60" width="240" x="-920" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Preprocessing" vertex="1">
+          <mxGeometry height="70" width="300" x="-590" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Audio Dataset" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="-460" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Audio Preprocessing" vertex="1">
+          <mxGeometry height="60" width="260" x="-200" y="-370" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Feature Extraction" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="-280" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Convert Features to CSV" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="-180" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Genre Model Training" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="-80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Genre Model Evaluation" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Lyrics Dataset (CSV)" vertex="1">
+          <mxGeometry height="60" width="260" x="280" y="-270" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Lyrics Preprocessing" vertex="1">
+          <mxGeometry height="60" width="260" x="280" y="-180" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Lyrics Model Training" vertex="1">
+          <mxGeometry height="60" width="260" x="290" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Lyrics Model Evaluation" vertex="1">
+          <mxGeometry height="60" width="260" x="290" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Genre Prediction" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Lyrics Emotion Prediction" vertex="1">
+          <mxGeometry height="60" width="300" x="290" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Display Genre Result" vertex="1">
+          <mxGeometry height="60" width="260" x="-210" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Display Lyrics Emotion Result" vertex="1">
+          <mxGeometry height="60" width="300" x="290" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="End" vertex="1">
+          <mxGeometry height="60" width="140" x="90" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="2" target="3" />
+        <mxCell id="24" edge="1" parent="1" source="3" target="4" />
+        <mxCell id="25" edge="1" parent="1" source="4" target="5" />
+        <mxCell id="26" edge="1" parent="1" source="5" target="6" />
+        <mxCell id="27" edge="1" parent="1" source="6" target="7" />
+        <mxCell id="28" edge="1" parent="1" source="8" target="9" />
+        <mxCell id="29" edge="1" parent="1" source="9" target="10" />
+        <mxCell id="30" edge="1" parent="1" source="10" target="11" />
+        <mxCell id="31" edge="1" parent="1" source="11" target="12" />
+        <mxCell id="32" edge="1" parent="1" source="12" target="13" />
+        <mxCell id="33" edge="1" parent="1" source="13" target="18" />
+        <mxCell id="34" edge="1" parent="1" source="14" target="15" />
+        <mxCell id="35" edge="1" parent="1" source="15" target="16" />
+        <mxCell id="36" edge="1" parent="1" source="16" target="17" />
+        <mxCell id="37" edge="1" parent="1" source="17" target="19" />
+        <mxCell id="38" edge="1" parent="1" source="7" target="18" />
+        <mxCell id="39" edge="1" parent="1" source="7" target="19" />
+        <mxCell id="40" edge="1" parent="1" source="18" target="20" />
+        <mxCell id="41" edge="1" parent="1" source="19" target="21" />
+        <mxCell id="42" edge="1" parent="1" source="20" target="22" />
+        <mxCell id="43" edge="1" parent="1" source="21" target="22" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

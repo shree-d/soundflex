@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Distribution Assistant | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/distribution.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="distribution-container">
+    <h2>🚀 Music Distribution Assistant</h2>
+
+    <p class="subtitle">
+        Choose your goals and get guidance on the best music distribution platform.
+    </p>
+
+    <form id="distributionForm">
+        <label>Artist Type</label>
+        <select id="artistType" required>
+            <option value="">Select</option>
+            <option>Independent Artist</option>
+            <option>Beginner</option>
+            <option>Professional Artist</option>
+        </select>
+
+        <label>Release Goal</label>
+        <select id="goal" required>
+            <option value="">Select</option>
+            <option>Wide Streaming Reach</option>
+            <option>Maximum Royalties</option>
+            <option>Easy Distribution</option>
+        </select>
+
+        <button type="submit">Get Distribution Advice</button>
+    </form>
+
+    <div id="result"></div>
+
+    <a href="/" class="home-btn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/distribution.js') }}"></script>
+{% endblock %}

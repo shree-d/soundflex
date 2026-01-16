@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SoundFlex{% endblock %}</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="/" class="brand">
+            <i class="fas fa-music"></i> SoundFlex
+        </a>
+
+        <div class="nav-links">
+            <a href="/" class="{{ 'active' if request.path == '/' else '' }}">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="/upload" class="{{ 'active' if request.path == '/upload' else '' }}">
+                <i class="fas fa-cloud-upload-alt"></i> Upload
+            </a>
+            <a href="/beat-production" class="{{ 'active' if request.path == '/beat-production' else '' }}">
+                <i class="fas fa-drum"></i> Beat Architect
+            </a>
+            <a href="/mixing" class="{{ 'active' if request.path == '/mixing' else '' }}">
+                <i class="fas fa-sliders-h"></i> Mixing Assistant
+            </a>
+            <a href="/distribution" class="{{ 'active' if request.path == '/distribution' else '' }}">
+                <i class="fas fa-globe"></i> Distribution
+            </a>
+            <a href="/lyrics" class="{{ 'active' if request.path == '/lyrics' else '' }}">
+                <i class="fas fa-pen-fancy"></i> Lyrics Analyzer
+            </a>
+            <a href="/history-page" class="{{ 'active' if request.path == '/history-page' else '' }}">
+                <i class="fas fa-history"></i> History
+            </a>
+            <a href="/profile" class="{{ 'active' if request.path == '/profile' else '' }}">
+                <i class="fas fa-user"></i> My Profile
+            </a>
+            <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+            <a href="/feedback" class="{{ 'active' if request.path == '/feedback' else '' }}">
+                <i class="fas fa-comment-alt"></i> Feedback
+            </a>
+        </div>
+
+        <div class="user-section">
+            {% if user %}
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i> {{ user }}
+            </div>
+            <a href="/logout" class="btn-logout">Logout</a>
+            {% else %}
+            <a href="/login" class="btn-login-sidebar">Login / Register</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>

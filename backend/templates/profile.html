@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}My Profile | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<!-- Profile CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h2>My Profile</h2>
+
+    <form id="profileForm">
+        <label>Name</label>
+        <input type="text" value="{{ profile.username }}" disabled>
+
+        <label>Email</label>
+        <input type="email" value="{{ profile.email }}" disabled>
+
+        <label>Bio</label>
+        <textarea id="bio">{{ profile.bio }}</textarea>
+
+        <label>Location</label>
+        <input type="text" id="location" value="{{ profile.location }}">
+
+        <button type="submit">Update Profile</button>
+    </form>
+
+    <p id="message"></p>
+
+    <a href="/" class="home-btn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Profile JS -->
+<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+{% endblock %}

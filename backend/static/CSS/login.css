@@ -1,0 +1,75 @@
+body {
+  background: radial-gradient(circle at top, #2b1a4d, #0b1020 70%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 18px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.auth-card h2 {
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #7b2ff7, #4c6fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-card p {
+  color: #cfd3ff;
+  margin-bottom: 25px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, #7b2ff7, #4c6fff);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  opacity: 0.9;
+}
+
+.switch {
+  margin-top: 15px;
+}
+
+.switch a {
+  color: #ff5ea8;
+  text-decoration: none;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 14px;
+}

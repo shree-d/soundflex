@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | SoundFlex</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<div class="admin-container">
+    <header class="admin-header">
+        <h2>🎛 SoundFlex Admin Panel</h2>
+        <button class="logout-btn" onclick="window.location.href='/admin-logout'">
+            Logout
+        </button>
+    </header>
+
+    <!-- Navigation -->
+    <div class="admin-nav">
+        <button onclick="loadUsers()">👥 Users</button>
+        <button onclick="loadUploads()">🎵 Music Uploads</button>
+        <button onclick="loadLyrics()">🎼 Lyrics Analysis</button>
+        <button onclick="loadFeedback()">💬 Feedback</button>
+    </div>
+
+    <!-- Dynamic Content -->
+    <div id="output" class="admin-content">
+        <p>Select an option above to view details.</p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

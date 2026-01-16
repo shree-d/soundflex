@@ -1,0 +1,10 @@
+flask
+flask-cors
+pymongo
+librosa
+numpy
+scikit-learn
+joblib
+soundfile
+werkzeug
+google-generativeai

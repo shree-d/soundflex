@@ -1,0 +1,71 @@
+body {
+    background: #0b1020;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.lyrics-container {
+    max-width: 600px;
+    margin: 120px auto;
+    background: #141a30;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+h2 {
+    text-align: center;
+    color: #6f8cff;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 160px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: #0f1530;
+    color: white;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(135deg, #7b2ff7, #4c6fff);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#result {
+    margin-top: 20px;
+    background: #0f1530;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.home-btn {
+    margin-top: 20px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #6f8cff;
+    color: #6f8cff;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}

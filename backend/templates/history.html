@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Upload History | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/history.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="history-container">
+    <h2>🎧 Upload History</h2>
+    <p class="user">Logged in as: <b>{{ session['user'] }}</b></p>
+
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>File</th>
+                <th>Predicted Genre</th>
+                <th>Uploaded At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filled by JS -->
+        </tbody>
+    </table>
+
+    <a href="/" class="home-btn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/history.js') }}"></script>
+{% endblock %}

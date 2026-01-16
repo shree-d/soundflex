@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Mixing & Mastering Assistant | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mixing.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="mixing-container">
+    <h2>🎚 Mixing & Mastering Assistant</h2>
+
+    <p class="subtitle">
+        Get smart suggestions to improve clarity, loudness, and balance of your track.
+    </p>
+
+    <form id="mixingForm">
+        <label>Music Type</label>
+        <select id="genre" required>
+            <option value="">Select</option>
+            <option>Hip Hop</option>
+            <option>Pop</option>
+            <option>Rock</option>
+            <option>EDM</option>
+            <option>Classical</option>
+            <option>Romantic</option>
+        </select>
+
+        <label>Track Focus</label>
+        <select id="focus" required>
+            <option value="">Select</option>
+            <option>Vocals</option>
+            <option>Bass</option>
+            <option>Overall Balance</option>
+        </select>
+
+        <button type="submit">Get Mixing Suggestions</button>
+    </form>
+
+    <div id="result"></div>
+
+    <a href="/" class="home-btn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/mixing.js') }}"></script>
+{% endblock %}

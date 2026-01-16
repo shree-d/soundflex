@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}SoundFlex - Music Genre Prediction{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<style>
+  /* Override styles that might conflict with sidebar layout */
+  .hero {
+    /* Adjust height or padding if needed since top nav is gone */
+    min-height: 80vh;
+  }
+
+  .container {
+    /* Ensure container fits well within the main content area */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Remove any top margin caused by fixed header spacer if it existed */
+  body {
+    padding-top: 0;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="music-elements">
+    <div class="note"><i class="fas fa-music"></i></div>
+    <div class="note"><i class="fas fa-headphones"></i></div>
+    <div class="note"><i class="fas fa-compact-disc"></i></div>
+    <div class="note"><i class="fas fa-volume-up"></i></div>
+  </div>
+
+  <div class="container">
+    <h1>Discover Your Music's Genre</h1>
+    <p>
+      Upload your audio files and let our AI-powered system analyze and predict
+      the music genre with incredible accuracy.
+    </p>
+
+    <div class="equalizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="/upload" class="btn btn-register btn-large">Get Started</a>
+      <a href="/about" class="btn btn-login btn-large">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-upload"></i>
+        </div>
+        <h3>Upload Your Music</h3>
+        <p>Simply upload your WAV or MP3 files to our secure platform.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Smart Analysis</h3>
+        <p>Your audio is analyzed to understand rhythm, tone, and patterns.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <h3>Instant Results</h3>
+        <p>Get clear genre predictions instantly after upload.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+
+      <div class="footer-column">
+        <h3>SoundFlex</h3>
+        <p>
+          A smart platform to analyze music and help artists understand their sound.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/upload">Upload</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/feedback">Feedback</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-envelope"></i> info@soundflex.com</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>© 2025 SoundFlex. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}

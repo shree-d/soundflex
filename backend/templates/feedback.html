@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="feedback-container">
+    <h2>Feedback</h2>
+
+    <p class="user">Logged in as: <b>{{ user }}</b></p>
+
+    <form id="feedbackForm">
+        <textarea id="message" placeholder="Write your feedback..." required></textarea>
+
+        <select id="rating" required>
+            <option value="">Rate Us</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="2">⭐⭐ Poor</option>
+            <option value="1">⭐ Very Poor</option>
+        </select>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p id="result"></p>
+
+    <a href="/" class="home-btn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
+{% endblock %}

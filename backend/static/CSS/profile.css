@@ -1,0 +1,97 @@
+body {
+    background: #0b1020;
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+}
+
+/* ===== PROFILE CONTAINER ===== */
+.profile-container {
+    max-width: 520px;
+    margin: 120px auto;
+    background: #141a30;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== TITLE ===== */
+.profile-container h2 {
+    text-align: center;
+    color: #6f8cff;
+    margin-bottom: 25px;
+}
+
+/* ===== FORM ===== */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #cfd3ff;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #0f1530;
+    color: white;
+    font-size: 14px;
+}
+
+form input:disabled {
+    background: #0b1020;
+    color: #888;
+    cursor: not-allowed;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ===== BUTTON ===== */
+form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: linear-gradient(135deg, #7b2ff7, #4c6fff);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+form button:hover {
+    transform: scale(1.02);
+}
+
+/* ===== MESSAGE ===== */
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== BACK BUTTON ===== */
+.profile-container > button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #6f8cff;
+    color: #6f8cff;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.profile-container > button:hover {
+    background: #0f1530;
+}

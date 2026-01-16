@@ -1,0 +1,127 @@
+/* ================================
+   Distribution Assistant Styles
+   ================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f1027, #1b1f4a, #2a1f5e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* Main Card */
+.distribution-container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 35px 30px 40px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    text-align: center;
+}
+
+/* Heading */
+.distribution-container h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to right, #8a5cff, #4f8cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 15px;
+    color: #c9c9e8;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Form */
+#distributionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+#distributionForm label {
+    text-align: left;
+    font-size: 14px;
+    color: #d8d8ff;
+}
+
+/* Select */
+#distributionForm select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #f4f6ff;
+    color: #1b1f4a;
+}
+
+/* Button */
+#distributionForm button {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(to right, #7a2cff, #3f6cff);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#distributionForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(122, 44, 255, 0.4);
+}
+
+/* Result Box */
+#result {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #bfffc7;
+    line-height: 1.7;
+}
+
+/* Home Button */
+.home-btn {
+    margin-top: 25px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .distribution-container {
+        padding: 30px 20px;
+    }
+
+    .distribution-container h2 {
+        font-size: 24px;
+    }
+}

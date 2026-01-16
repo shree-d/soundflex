@@ -1,0 +1,67 @@
+body {
+    background: #0b1020;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Main Container */
+.about-container {
+    max-width: 700px;
+    margin: 120px auto;
+    background: #141a30;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Page Title */
+h2 {
+    text-align: center;
+    color: #6f8cff;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+/* Content Text */
+.about-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 18px;
+}
+
+/* Feature List */
+.features {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Back to Home Button */
+.home-btn {
+    width: 100%;
+    margin-top: 30px;
+    background: transparent;
+    border: 1px solid #6f8cff;
+    color: #6f8cff;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.home-btn:hover {
+    background: rgba(111, 140, 255, 0.1);
+}

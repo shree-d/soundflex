@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}AI Beat Architect | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/beat_production.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="production-container">
+
+    <div class="header-section">
+        <h2>AI Beat Architect</h2>
+        <p style="color: #a0a5cc;">Generate pro-level production recipes for any genre in seconds.</p>
+    </div>
+
+    <div class="control-panel">
+        <div class="input-group">
+            <label>Genre Style</label>
+            <select id="beatGenre" class="custom-select">
+                <option value="Boom Bap">Boom Bap (90s Style)</option>
+                <option value="Trap">Trap (Modern)</option>
+                <option value="Drill">UK/NY Drill</option>
+                <option value="Lo-fi">Lo-fi Hip Hop</option>
+                <option value="R&B">Soulful R&B</option>
+                <option value="Afrobeat">Afrobeat</option>
+                <option value="Synthwave">Synthwave</option>
+                <option value="Cinematic">Cinematic Score</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Vibe / Mood</label>
+            <input type="text" id="beatVibe" class="custom-input"
+                placeholder="e.g. Dark, Aggressive, Summer, Nostalgic...">
+        </div>
+
+        <button id="generateBtn" class="generate-btn">
+            <i class="fas fa-magic"></i> Generate Blueprint
+        </button>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loader"></div>
+        <p>Analyzing genre mechanics...</p>
+        <p style="font-size: 0.8rem; color: #777; margin-top: 10px;">(This uses free AI tiers. Please wait 15-30
+            seconds.)</p>
+    </div>
+
+    <div id="recipeGrid" class="recipe-grid">
+
+        <!-- Drums Card -->
+        <div class="recipe-card">
+            <div class="card-header">
+                <i class="fas fa-drum"></i>
+                <h3>Drums & Rhythm</h3>
+            </div>
+            <div id="outDrum" class="card-content"></div>
+        </div>
+
+        <!-- Instruments Card -->
+        <div class="recipe-card">
+            <div class="card-header">
+                <i class="fas fa-guitar"></i>
+                <h3>Instruments & Melodies</h3>
+            </div>
+            <div id="outInst" class="card-content"></div>
+        </div>
+
+        <!-- Mixing Card -->
+        <div class="recipe-card">
+            <div class="card-header">
+                <i class="fas fa-sliders-h"></i>
+                <h3>Mixing & FX Chain</h3>
+            </div>
+            <div id="outMix" class="card-content"></div>
+        </div>
+
+        <!-- Arrangement Card -->
+        <div class="recipe-card">
+            <div class="card-header">
+                <i class="fas fa-layer-group"></i>
+                <h3>Arrangement & Tips</h3>
+            </div>
+            <div id="outArr" class="card-content"></div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/beat_production.js') }}"></script>
+{% endblock %}

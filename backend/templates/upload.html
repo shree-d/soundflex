@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Music | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="upload-container">
+    <h2>Upload Your Music</h2>
+
+    <p class="user">
+        Logged in as: <b>{{ user }}</b>
+    </p>
+
+    <!-- Upload Form -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".mp3,.wav" required>
+        <button type="submit" class="upload-btn">Upload</button>
+    </form>
+
+    <!-- Result -->
+    <p id="result"></p>
+
+    <!-- ✅ Waveform Canvas (ADDED) -->
+    <canvas id="waveCanvas" width="400" height="120" style="margin-top:15px;background:#1a2f65;border-radius:8px;">
+    </canvas>
+
+    <!-- Back to Home -->
+    <a href="/" class="home-btn" id="homeBtn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+{% endblock %}

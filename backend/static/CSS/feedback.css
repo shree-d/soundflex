@@ -1,0 +1,89 @@
+body {
+    background: #0b1020;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Main Card */
+.feedback-container {
+    max-width: 520px;
+    margin: 120px auto;
+    background: #141a30;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #6f8cff;
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Inputs & Textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: linear-gradient(135deg, #7b2ff7, #4c6fff);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Result Message */
+#result {
+    margin-top: 20px;
+    background: #0f1530;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Back to Home Button */
+.home-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid #6f8cff;
+    color: #6f8cff;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.home-btn:hover {
+    background: rgba(111, 140, 255, 0.1);
+}

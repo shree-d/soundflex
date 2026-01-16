@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Lyrics Emotion Analyzer | SoundFlex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lyrics.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lyrics-container">
+    <h2>🎼 Lyrics Emotion Analyzer</h2>
+
+    <p class="subtitle">
+        Paste your song lyrics below to detect the emotional tone.
+    </p>
+
+    <form id="lyricsForm">
+        <textarea id="lyricsText" placeholder="Paste your song lyrics here..." required></textarea>
+
+        <button type="submit">Analyze Emotion</button>
+    </form>
+
+    <div id="result"></div>
+
+    <a href="/" class="home-btn"
+        style="text-decoration:none; display:inline-block; margin-top:20px; padding:10px 20px; background:#aa00ff; color:white; border-radius:5px;">⬅
+        Back to Home</a>
+</div>
+
+<script>
+    document.getElementById("lyricsForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const lyrics = document.getElementById("lyricsText").value.trim();
+        const result = document.getElementById("result");
+
+        if (!lyrics) {
+            result.style.color = "orange";
+            result.innerText = "Please enter lyrics";
+            return;
+        }
+
+        result.style.color = "white";
+        result.innerText = "Analyzing lyrics...";
+
+        try {
+            const res = await fetch("/api/lyrics-emotion", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify({ lyrics })
+            });
+
+            const data = await res.json();
+
+            if (res.ok && data.emotion) {
+                result.style.color = "lightgreen";
+                result.innerHTML = `
+                <b>Detected Emotion:</b> <span>${data.emotion}</span>
+            `;
+            } else {
+                result.style.color = "orange";
+                result.innerText = data.error || "Unable to analyze lyrics";
+            }
+
+        } catch (err) {
+            console.error(err);
+            result.style.color = "red";
+            result.innerText = "Server error. Try again.";
+        }
+    });
+</script>
+{% endblock %}
