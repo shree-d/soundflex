@@ -4,10 +4,10 @@ from datetime import datetime
 
 # ================== MONGODB CONNECTION ==================
 client = MongoClient("mongodb://localhost:27017/")
-db = client["soundflex_db"]   # ✅ SAME DB everywhere
+db = client["soundflex_db"]  
 
 users = db["users"]
-profiles = db["profiles"]     # ✅ NEW COLLECTION
+profiles = db["profiles"]     
 
 # ================== REGISTER USER ==================
 def register_user(name, email, password):
@@ -26,7 +26,7 @@ def register_user(name, email, password):
         "created_at": datetime.utcnow()
     })
 
-    # ✅ AUTO CREATE PROFILE
+    # AUTO CREATE PROFILE
     profiles.insert_one({
         "email": email,
         "username": name,
