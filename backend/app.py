@@ -45,7 +45,7 @@ db = client["soundflex_db"]
 users = db["users"]
 songs = db["songs"]
 feedbacks = db["feedback"]
-lyrics_history = db["lyrics_history"]  # ✅ NEW COLLECTION
+lyrics_history = db["lyrics_history"]  
 
 # ======================================================
 # BAD WORDS LIST
