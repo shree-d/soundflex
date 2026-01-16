@@ -11,11 +11,11 @@ profiles = db["profiles"]
 
 # ================== REGISTER USER ==================
 def register_user(name, email, password):
-    print("📥 Register request:", name, email)
+    print(" Register request:", name, email)
 
     # Check if user already exists
     if users.find_one({"email": email}):
-        print("❌ User already exists")
+        print(" User already exists")
         return False, "User already exists"
 
     # Insert into users collection
@@ -36,7 +36,7 @@ def register_user(name, email, password):
         "created_at": datetime.utcnow()
     })
 
-    print("✅ User & Profile created successfully")
+    print(" User & Profile created successfully")
     return True, "Registration successful"
 
 # ================== LOGIN USER ==================
